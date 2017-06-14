@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="aDW-vD-1A5" customClass="MSAlertControllerButtonComponent" customModule="PMGAlertController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ue7-pd-vE7">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="7LM-9M-Y8p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buttonPressed:" destination="aDW-vD-1A5" eventType="touchUpInside" id="oI4-60-6qo"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnh-TM-hRp">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="x4N-tx-Dcd"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ue7-pd-vE7" firstAttribute="top" secondItem="aDW-vD-1A5" secondAttribute="top" id="2Iu-tw-rU5"/>
+                <constraint firstItem="Tnh-TM-hRp" firstAttribute="leading" secondItem="aDW-vD-1A5" secondAttribute="leading" id="5OO-bs-rAz"/>
+                <constraint firstItem="ue7-pd-vE7" firstAttribute="leading" secondItem="aDW-vD-1A5" secondAttribute="leading" id="6Bv-yM-v4d"/>
+                <constraint firstAttribute="trailing" secondItem="Tnh-TM-hRp" secondAttribute="trailing" id="Djh-5e-LsL"/>
+                <constraint firstAttribute="bottom" secondItem="ue7-pd-vE7" secondAttribute="bottom" id="FYW-Ze-zD7"/>
+                <constraint firstItem="Tnh-TM-hRp" firstAttribute="top" secondItem="aDW-vD-1A5" secondAttribute="top" id="OTX-Td-5Gd"/>
+                <constraint firstAttribute="trailing" secondItem="ue7-pd-vE7" secondAttribute="trailing" id="gmL-bg-Z6v"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomConstraint" destination="FYW-Ze-zD7" id="rKn-K4-2lY"/>
+                <outlet property="button" destination="ue7-pd-vE7" id="BBo-Gx-sCl"/>
+                <outlet property="heightConstraint" destination="7LM-9M-Y8p" id="xoB-HZ-VGn"/>
+                <outlet property="leftConstraint" destination="6Bv-yM-v4d" id="IGR-Bt-o4V"/>
+                <outlet property="rightConstraint" destination="gmL-bg-Z6v" id="qht-iq-raf"/>
+                <outlet property="separatorView" destination="Tnh-TM-hRp" id="RtJ-rB-Bye"/>
+                <outlet property="topConstraint" destination="2Iu-tw-rU5" id="wtr-Sn-cWC"/>
+            </connections>
+            <point key="canvasLocation" x="-116" y="-228"/>
+        </view>
+    </objects>
+</document>
