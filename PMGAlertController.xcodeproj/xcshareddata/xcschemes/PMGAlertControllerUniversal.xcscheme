@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0820"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "NO"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2719A8B51E28D3410000393C"
+               BuildableName = "PMGAlertController.framework"
+               BlueprintName = "PMGAlertController"
+               ReferencedContainer = "container:PMGAlertController.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2719A8B51E28D3410000393C"
+            BuildableName = "PMGAlertController.framework"
+            BlueprintName = "PMGAlertController"
+            ReferencedContainer = "container:PMGAlertController.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2719A8B51E28D3410000393C"
+            BuildableName = "PMGAlertController.framework"
+            BlueprintName = "PMGAlertController"
+            ReferencedContainer = "container:PMGAlertController.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "#!/bin/sh&#10;&#10;exec &gt; /tmp/${PROJECT_NAME}_archive.log 2&gt;&amp;1&#10;&#10;UNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal&#10;SIMULATOR_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-iphonesimulator&#10;DEVICE_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-iphoneos&#10;&#10;&#10;&#10;if [ &quot;true&quot; == ${ALREADYINVOKED:-false} ]&#10;then&#10;echo &quot;RECURSION: Detected, stopping&quot;&#10;else&#10;export ALREADYINVOKED=&quot;true&quot;&#10;&#10;# make sure the output directory exists&#10;mkdir -p &quot;${UNIVERSAL_OUTPUTFOLDER}&quot;&#10;echo &quot;Building for iPhoneSimulator&quot;&#10;xcodebuild -project &quot;${PROJECT_FILE_PATH}&quot; -scheme &quot;${SCHEME_NAME}&quot; -sdk iphonesimulator -configuration &quot;${CONFIGURATION}&quot; ARCHS=&quot;i386 x86_64&quot; ONLY_ACTIVE_ARCH=NO BUILD_DIR=${BUILD_DIR} BUILD_ROOT=${BUILD_ROOT} &#10;&#10;# Step 1. Copy the framework structure (from iphoneos build) to the universal folder&#10;echo &quot;Copying to output folder&quot;&#10;cp -R &quot;${ARCHIVE_PRODUCTS_PATH}/${INSTALL_PATH}/${FULL_PRODUCT_NAME}&quot; &quot;${UNIVERSAL_OUTPUTFOLDER}/&quot;&#10;&#10;&#10;SIMULATOR_SWIFT_MODULES_DIR=&quot;${SIMULATOR_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.&quot;&#10;if [ -d &quot;${SIMULATOR_SWIFT_MODULES_DIR}&quot; ]; then&#10;cp -R &quot;${SIMULATOR_SWIFT_MODULES_DIR}&quot; &quot;${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule&quot;&#10;fi&#10;&#10;# Step 2. Create universal binary file using lipo and place the combined executable in the copied framework directory&#10;echo &quot;Combining executables&quot;&#10;lipo -create -output &quot;${UNIVERSAL_OUTPUTFOLDER}/${EXECUTABLE_PATH}&quot; &quot;${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${EXECUTABLE_PATH}&quot; &quot;${ARCHIVE_PRODUCTS_PATH}${INSTALL_PATH}/${EXECUTABLE_PATH}&quot;&#10;&#10;# Step 3. Convenience step to copy the framework to the project&apos;s directory&#10;echo &quot;Copying to project dir&quot;&#10;yes | cp -Rf &quot;${UNIVERSAL_OUTPUTFOLDER}/${FULL_PRODUCT_NAME}&quot; &quot;${ARCHIVE_PRODUCTS_PATH}${INSTALL_PATH}&quot;&#10;&#10;fi&#10;&#10;open &quot;${UNIVERSAL_OUTPUTFOLDER}&quot;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "2719A8B51E28D3410000393C"
+                     BuildableName = "PMGAlertController.framework"
+                     BlueprintName = "PMGAlertController"
+                     ReferencedContainer = "container:PMGAlertController.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
+   </ArchiveAction>
+</Scheme>

@@ -1,0 +1,8 @@
+.DS_Store
+xcuserdata
+fastlane/screenshots/screenshots.html
+fastlane/screenshots/*/*.png
+fastlane/report.xml
+timeline.xctimeline
+Output
+DerivedData
