@@ -26,8 +26,8 @@ open class MSAlertControllerCheckboxComponent: MSAlertControllerComponent, MSAle
     @IBOutlet private var checkboxLabel: UILabel!
     @IBOutlet private var toggleButton: UIButton!
     
-    private var untickedImage = UIImage(named: "IconCheckboxUnticked.png", in: Bundle(identifier: "com.pmg.MSAlertController"), compatibleWith: nil)
-    private var tickedImage = UIImage(named: "IconCheckboxTicked.png", in: Bundle(identifier: "com.pmg.MSAlertController"), compatibleWith: nil)
+    private var untickedImage = UIImage(named: "IconCheckboxUnticked.png", in: Bundle(identifier: "uk.co.militiasoftworks.msalertcontroller"), compatibleWith: nil)
+    private var tickedImage = UIImage(named: "IconCheckboxTicked.png", in: Bundle(identifier: "uk.co.militiasoftworks.msalertcontroller"), compatibleWith: nil)
     
     private var tick: UIImageView!
     
@@ -45,7 +45,7 @@ open class MSAlertControllerCheckboxComponent: MSAlertControllerComponent, MSAle
     }
     
     internal static func empty() -> MSAlertControllerCheckboxComponent {
-        let selfFromNib = UINib(nibName: "MSAlertControllerCheckboxComponent", bundle: Bundle(identifier: "com.pmg.MSAlertController")).instantiate(withOwner: nil, options: nil).first as! MSAlertControllerCheckboxComponent
+        let selfFromNib = UINib(nibName: "MSAlertControllerCheckboxComponent", bundle: Bundle(identifier: "uk.co.militiasoftworks.msalertcontroller")).instantiate(withOwner: nil, options: nil).first as! MSAlertControllerCheckboxComponent
         selfFromNib.translatesAutoresizingMaskIntoConstraints = false
         selfFromNib.checkboxView.translatesAutoresizingMaskIntoConstraints = false
         selfFromNib.checkboxLabel.translatesAutoresizingMaskIntoConstraints = false

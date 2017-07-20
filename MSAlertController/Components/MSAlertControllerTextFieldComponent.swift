@@ -43,7 +43,7 @@ public class MSAlertControllerTextFieldComponent: MSAlertControllerComponent, MS
     }
     
     internal static func empty() -> MSAlertControllerTextFieldComponent {
-        let selfFromNib = UINib(nibName: "MSAlertControllerTextFieldComponent", bundle: Bundle(identifier: "com.pmg.MSAlertController")).instantiate(withOwner: nil, options: nil).first as! MSAlertControllerTextFieldComponent
+        let selfFromNib = UINib(nibName: "MSAlertControllerTextFieldComponent", bundle: Bundle(identifier: "uk.co.militiasoftworks.msalertcontroller")).instantiate(withOwner: nil, options: nil).first as! MSAlertControllerTextFieldComponent
         return selfFromNib
     }
     

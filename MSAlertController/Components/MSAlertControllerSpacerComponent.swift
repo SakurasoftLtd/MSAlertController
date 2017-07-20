@@ -25,7 +25,7 @@ open class MSAlertControllerSpacerComponent: MSAlertControllerComponent {
     @IBOutlet private var spacerView: UIView!
     
     open static func withSpacing(_ spacing: CGFloat) -> MSAlertControllerSpacerComponent {
-        let selfFromNib = UINib(nibName: "MSAlertControllerSpacerComponent", bundle: Bundle(identifier: "com.pmg.MSAlertController")).instantiate(withOwner: nil, options: nil).first as! MSAlertControllerSpacerComponent
+        let selfFromNib = UINib(nibName: "MSAlertControllerSpacerComponent", bundle: Bundle(identifier: "uk.co.militiasoftworks.msalertcontroller")).instantiate(withOwner: nil, options: nil).first as! MSAlertControllerSpacerComponent
         selfFromNib.heightConstraint?.constant = spacing
         selfFromNib.spacerView.translatesAutoresizingMaskIntoConstraints = false
         return selfFromNib

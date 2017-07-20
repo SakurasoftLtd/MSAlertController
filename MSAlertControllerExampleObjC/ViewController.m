@@ -64,20 +64,20 @@
     
     MSAlertController *alert = [MSAlertController empty];
     
-    MSAlertControllerTitleComponent *title = [MSAlertControllerTitleComponent withTitleText:@"ParkNow sticker required"];
+    MSAlertControllerTitleComponent *title = [MSAlertControllerTitleComponent withTitleText:@"Licence Required"];
     
-    MSAlertControllerBodyComponent *body = [MSAlertControllerBodyComponent withBodyText:@"This on-street location requires a parking sitcker to be displayed in the windscreen of your vehicle.\n\nDon’t have a parking sticker yet? You can download the parking sticker for free on park-now.com or order one below. Alternatively, you can place a note with ‘ParkNow Handyparken’ behind your windscreen."];
+    MSAlertControllerBodyComponent *body = [MSAlertControllerBodyComponent withBodyText:@"You must purchase a licence to continually use this software."];
     
     MSAlertControllerCheckboxComponent *box = [MSAlertControllerCheckboxComponent withText:@"Don't remind me" defaultStateIsTicked:NO toggleAction:^(UIButton * _Nonnull button, BOOL checked) {
         // Executed when checkbox is toggled.
     }];
     
-    MSAlertControllerButtonComponent *button1 = [MSAlertControllerButtonComponent submissiveButtonWithText:@"Start parking" andAction:^(id _Nonnull sender) {
+    MSAlertControllerButtonComponent *button1 = [MSAlertControllerButtonComponent submissiveButtonWithText:@"Continue with evaluation" andAction:^(id _Nonnull sender) {
         // Executed when button is pressed.
         [alert dismissAlertWithAnimation:MSAlertControllerHideAnimationSlideCentre];
     }];
     
-    MSAlertControllerButtonComponent *button2 = [MSAlertControllerButtonComponent standardButtonWithText:@"Order a sticker" andAction:^(id _Nonnull sender) {
+    MSAlertControllerButtonComponent *button2 = [MSAlertControllerButtonComponent standardButtonWithText:@"Purchase a licence" andAction:^(id _Nonnull sender) {
         // Executed when button is pressed.
         [alert dismissAlertWithAnimation:MSAlertControllerHideAnimationSlideCentre];
     }];

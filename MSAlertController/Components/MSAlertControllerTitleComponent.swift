@@ -31,7 +31,7 @@ open class MSAlertControllerTitleComponent: MSAlertControllerComponent, MSAlertC
     }
     
     internal static func empty() -> MSAlertControllerTitleComponent {
-        let selfFromNib = UINib(nibName: "MSAlertControllerTitleComponent", bundle: Bundle(identifier: "com.pmg.MSAlertController")).instantiate(withOwner: nil, options: nil).first as! MSAlertControllerTitleComponent
+        let selfFromNib = UINib(nibName: "MSAlertControllerTitleComponent", bundle: Bundle(identifier: "uk.co.militiasoftworks.msalertcontroller")).instantiate(withOwner: nil, options: nil).first as! MSAlertControllerTitleComponent
         return selfFromNib
     }
     

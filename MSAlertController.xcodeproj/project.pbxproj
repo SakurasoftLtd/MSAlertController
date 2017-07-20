@@ -49,6 +49,8 @@
 		27AFB39D1E5DDFD900128E8E /* MSToastController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AFB39C1E5DDFD900128E8E /* MSToastController.swift */; };
 		27AFB39F1E5DE00200128E8E /* MSToastController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27AFB39E1E5DE00200128E8E /* MSToastController.xib */; };
 		27AFB3A11E5DE7A800128E8E /* MSAlertControllerDelayHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AFB3A01E5DE7A800128E8E /* MSAlertControllerDelayHelper.swift */; };
+		27CB10A01F20E24A000511B5 /* MSAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB109F1F20E24A000511B5 /* MSAlertManager.swift */; };
+		27CB10A21F20E318000511B5 /* Array+MSAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CB10A11F20E318000511B5 /* Array+MSAlertController.swift */; };
 		27E3CEA61E2E357900A18C9D /* MSAlertControllerBodyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3CEA51E2E357900A18C9D /* MSAlertControllerBodyComponent.swift */; };
 		27E3CEA81E2E359000A18C9D /* MSAlertControllerBodyComponent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E3CEA71E2E359000A18C9D /* MSAlertControllerBodyComponent.xib */; };
 		27E3CEAA1E2E7D6F00A18C9D /* MSAlertControllerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E3CEA91E2E7D6F00A18C9D /* MSAlertControllerAnimation.swift */; };
@@ -104,6 +106,8 @@
 		27AFB39C1E5DDFD900128E8E /* MSToastController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSToastController.swift; sourceTree = "<group>"; };
 		27AFB39E1E5DE00200128E8E /* MSToastController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSToastController.xib; sourceTree = "<group>"; };
 		27AFB3A01E5DE7A800128E8E /* MSAlertControllerDelayHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSAlertControllerDelayHelper.swift; sourceTree = "<group>"; };
+		27CB109F1F20E24A000511B5 /* MSAlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSAlertManager.swift; sourceTree = "<group>"; };
+		27CB10A11F20E318000511B5 /* Array+MSAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+MSAlertController.swift"; sourceTree = "<group>"; };
 		27E3CEA51E2E357900A18C9D /* MSAlertControllerBodyComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSAlertControllerBodyComponent.swift; sourceTree = "<group>"; };
 		27E3CEA71E2E359000A18C9D /* MSAlertControllerBodyComponent.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MSAlertControllerBodyComponent.xib; sourceTree = "<group>"; };
 		27E3CEA91E2E7D6F00A18C9D /* MSAlertControllerAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSAlertControllerAnimation.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 				2719A9171E28E7A80000393C /* MSAlertController.xib */,
 				27AFB39C1E5DDFD900128E8E /* MSToastController.swift */,
 				27AFB39E1E5DE00200128E8E /* MSToastController.xib */,
+				27CB109F1F20E24A000511B5 /* MSAlertManager.swift */,
 			);
 			path = MSAlertController;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				27E3CEA91E2E7D6F00A18C9D /* MSAlertControllerAnimation.swift */,
 				27AFB3A01E5DE7A800128E8E /* MSAlertControllerDelayHelper.swift */,
 				2710DAA51E93D39700381D76 /* KeyboardEventHelper.swift */,
+				27CB10A11F20E318000511B5 /* Array+MSAlertController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -437,6 +443,8 @@
 				2719A9141E28DF2D0000393C /* MSAlertControllerTitleComponent.swift in Sources */,
 				27E3CEAA1E2E7D6F00A18C9D /* MSAlertControllerAnimation.swift in Sources */,
 				27A5B44C1E297F6C00FBD432 /* MSAlertControllerTextFieldComponent.swift in Sources */,
+				27CB10A01F20E24A000511B5 /* MSAlertManager.swift in Sources */,
+				27CB10A21F20E318000511B5 /* Array+MSAlertController.swift in Sources */,
 				2719A91B1E28EFEF0000393C /* UIView+MSAlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -43,7 +43,7 @@ open class MSAlertControllerButtonComponent: MSAlertControllerComponent, MSAlert
     }
     
     internal static func empty() -> MSAlertControllerButtonComponent {
-        let selfFromNib = UINib(nibName: "MSAlertControllerButtonComponent", bundle: Bundle(identifier: "com.pmg.MSAlertController")).instantiate(withOwner: nil, options: nil).first as! MSAlertControllerButtonComponent
+        let selfFromNib = UINib(nibName: "MSAlertControllerButtonComponent", bundle: Bundle(identifier: "uk.co.militiasoftworks.msalertcontroller")).instantiate(withOwner: nil, options: nil).first as! MSAlertControllerButtonComponent
         selfFromNib.button.translatesAutoresizingMaskIntoConstraints = false
         selfFromNib.separatorView.translatesAutoresizingMaskIntoConstraints = false
         // TODO: Resize buttons according to theme.

@@ -44,13 +44,13 @@ open class MSToastController: UIViewController {
     open var onDismiss: (() -> Void)?
     
     open static func withText(_ text: String) -> MSToastController {
-        let selfFromNib = UINib(nibName: "MSToastController", bundle: Bundle(identifier: "com.pmg.MSAlertController")).instantiate(withOwner: nil, options: nil).first as! MSToastController
+        let selfFromNib = UINib(nibName: "MSToastController", bundle: Bundle(identifier: "uk.co.militiasoftworks.msalertcontroller")).instantiate(withOwner: nil, options: nil).first as! MSToastController
         selfFromNib.label.text = text
         return selfFromNib
     }
     
     open static func withAttributedText(_ text: NSAttributedString) -> MSToastController {
-        let selfFromNib = UINib(nibName: "MSToastController", bundle: Bundle(identifier: "com.pmg.MSAlertController")).instantiate(withOwner: nil, options: nil).first as! MSToastController
+        let selfFromNib = UINib(nibName: "MSToastController", bundle: Bundle(identifier: "uk.co.militiasoftworks.msalertcontroller")).instantiate(withOwner: nil, options: nil).first as! MSToastController
         selfFromNib.label.attributedText = text
         return selfFromNib
     }

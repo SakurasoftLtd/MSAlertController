@@ -53,7 +53,7 @@ open class MSAlertController: UIViewController, UITableViewDataSource, UITableVi
     
     // Master init
     open static func empty() -> MSAlertController {
-        let selfFromNib = UINib(nibName: "MSAlertController", bundle: Bundle(identifier: "com.pmg.MSAlertController")).instantiate(withOwner: nil, options: nil).first as! MSAlertController
+        let selfFromNib = UINib(nibName: "MSAlertController", bundle: Bundle(identifier: "uk.co.militiasoftworks.msalertcontroller")).instantiate(withOwner: nil, options: nil).first as! MSAlertController
         selfFromNib.configure()
         return selfFromNib
     }
