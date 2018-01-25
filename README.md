@@ -18,11 +18,11 @@ MSAlertController is written entirely in Swift, however it is fully compatible w
 Swift 3.0 is required to integrate into a Swift codebase.
 
 
-###Install From Cocoapods
+### Install From Cocoapods
 
 *Cocoapods support coming soon.*
 
-###Install as Framework
+### Install as Framework
 Download the source code from Stash and compile the MSAlertController framework target, and then within your application, add the following:
 
 ```objective-c
@@ -40,7 +40,7 @@ Download the source code from Stash and compile the MSAlertController framework 
 // In any source file that references MSAlertController, import it like so:
 import MSAlertController
 ```
-###Install as Source
+### Install as Source
 Download the source code from Stash and add to your target the contents of the MSAlertController root directory:
 
 ```objective-c
@@ -58,7 +58,7 @@ Download the source code from Stash and add to your target the contents of the M
 // No additional import needed when installed as Swift source.
 ```
 
-##Getting help and support
+## Getting help and support
 This library was originally written by Jacob King, of Cobalt Telephone Technologies Ltd. Whilst it is well documented here, if you have any questions that aren't covered please reach out to him.
 
 ## Usage
@@ -126,12 +126,12 @@ let alert = MSAlertController.basicTwoButton(title: "Question!", body: "Do you l
         alert.showAlert(withAnimation: .none)
 ```
 
-###Components
+### Components
 Due to MSAlertController's infinitely customisable nature, every alert is comprised of 'components'. Take the alerts that are shown above, for example. They are comprised of a title component, a body component and either one or two button components.
 
 In the same way as the built in methods seen above create alerts, you can build your own custom alerts using a powerful set of APIs built right into each component. Let's look in more detail. I want an alert that includes a title, body, checkbox and 3 buttons; but there is no built in method in MSAlertController to make this? No problem, you can build the alert yourself with easy to use methods. An example for the above criteria is shown below:
 
-####Example Alert, built from components:
+#### Example Alert, built from components:
 
 ```objective-c
 // Objective-C
@@ -215,7 +215,7 @@ The above code might look daunting, but once we break it down it's very simple.
  4. Set the alert's `components` property to an array containing all the components.
  5. Finally, show the alert using an animation of your choice. More on animations below.
 
-##Components - Detail
+## Components - Detail
 
 MSAlertController has a number of built in components, as briefly touched on above. As of writing these are:
 
@@ -229,7 +229,7 @@ MSAlertController has a number of built in components, as briefly touched on abo
 
 These components are detailed below.
 
-####**MSAlertControllerTitleComponent**
+#### **MSAlertControllerTitleComponent**
 
 The title component exposes 3 static builder methods, the first two are convenience builders and simply take the title text (or attributed text) as an argument, they do all the heavy lifting for you.
 
@@ -245,7 +245,7 @@ In most scenarios you will use one of these two methods to create title componen
 public static func withCustomConfiguration(_ configHandler: @escaping ((_ label: UILabel) -> Void)) -> MSAlertControllerTitleComponent
 ```
 
-####**MSAlertControllerBodyComponent**
+#### **MSAlertControllerBodyComponent**
 
 The body component exposes the same methods as the title component, and is in effect the same component. The only thing that sets it apart is the styling.
 
@@ -257,7 +257,7 @@ public static func withAttributedBodyText(_ attributedText: NSAttributedString) 
 public static func withCustomConfiguration(_ configHandler: @escaping ((_ label: UILabel) -> Void)) -> MSAlertControllerBodyComponent
 ```
 
-####**MSAlertControllerSpacerComponent**
+#### **MSAlertControllerSpacerComponent**
 
 The spacer component is something you will rarely use, it existed before I implemented the constraint map system as a way of applying custom spacing to components. Everything that it can do can be done with less code using the constraint map, but by way of completeness I have left it in incase you want to use it. It exposes only one method that allows you to set **vertical** spacing between components. The spacing is added between whichever components are adjacent to it in the alert's `components` array.
 
@@ -265,7 +265,7 @@ The spacer component is something you will rarely use, it existed before I imple
 public static func withSpacing(_ spacing: CGFloat) -> MSAlertControllerSpacerComponent
 ```
 
-####**MSAlertControllerButtonComponent**
+#### **MSAlertControllerButtonComponent**
 
 The button component is crucial to all alerts as it is the main way in which an alert will be dismissed or acted upon. It exposes 4 methods, however 3 of these are basically the same but the one you use dictates how the button is styled. 3 styles exist, these are `standard`,  `destructive` and `submissive`. These styles are reflected below, along with the standard custom config method, exposing the UIButton object.
 
@@ -279,7 +279,7 @@ submissiveButtonWithText(_ text: String, andAction action: @escaping ((_ sender:
 withCustomConfiguration(_ configHandler: @escaping ((_ button: UIButton) -> Void), andButtonAction action: @escaping ((_ sender: Any) -> Void)) -> MSAlertControllerButtonComponent
 ```
 
-####**MSAlertControllerTextFieldComponent**
+#### **MSAlertControllerTextFieldComponent**
 
 MSAlertController also includes a built in UITextField based component incase you want to capture information from the user in your alert. It exposes 3 methods that can be seen below.
 
@@ -291,7 +291,7 @@ public static func withPlaceholderText(_ text: String, keyboard: UIKeyboardType,
 public static func withCustomConfiguration(_ configHandler: @escaping ((_ textfield: UITextField) -> Void)) -> MSAlertControllerTextFieldComponent
 ```
 
-####**MSAlertControllerCheckboxComponent**
+#### **MSAlertControllerCheckboxComponent**
 
 The checkbox component displays an interactive checkbox that can be ticked and un-ticked when the user taps it. It exposes 2 methods, one of which is the usual custom config method:
 
@@ -301,7 +301,7 @@ public static func withText(_ text: String, defaultStateIsTicked: Bool, toggleAc
 public static func withCustomConfiguration(_ configHandler: @escaping ((_ checkbox: UIView) -> Void)) -> MSAlertControllerCheckboxComponent
 ```
 
-####**MSAlertControllerEmbedComponent**
+#### **MSAlertControllerEmbedComponent**
 
 This is perhaps the most powerful of all the components, it allows the user to display any custom view of their choice within the alert. The only criteria for this view is that the user must specify it's height as it is ambiguous to the alert view. One method is exposed here, with no custom configuration as the user is expected to configure their own view before passing it to the embed component.
 
@@ -309,7 +309,7 @@ This is perhaps the most powerful of all the components, it allows the user to d
 public static func withEmbeddedView(view: UIView, andFixedHeight height: CGFloat) -> MSAlertControllerEmbedComponent
 ```
 
-##Positioning & Spacing
+## Positioning & Spacing
 
 MSAlertController's components all have a default padding of 0pts on all sides, therefore if you constructed your alert without specifying custom padding, there would be no spacing between components and no padding at the sides.
 
@@ -339,7 +339,7 @@ title.applyConstraintMap(map: MSAlertControllerConstraintMap(top: 16, bottom: 8,
 
 Notice that the value of `bottom` here is 8 whilst all others have the value of 16? This is because below this title component there is a body component which also has a top value of 8. Both of these together makes 16 and therefore there will be 16pts of padding between the title and body components. Keep this in mind when specifying your constraint values.
 
-##Animation
+## Animation
 
 When you present or dismiss your alert, you can specify an animation which the system will honour when presenting or dismissing the alert. There are currently 3 animation options, but I am actively adding more. The animation options are:
 
@@ -381,7 +381,7 @@ public enum MSAlertControllerHideAnimation: Int {
 }
 ```
 
-##Theming
+## Theming
 
 You might have noticed the lack of customisation options available in the methods exposed by the various components, this is because MSAlertController uses a theming system to style all of it's UI. This makes it easy to have a consistent style across all the alerts in your app, but is powerful enough to customise the style on a per-alert basis should you want to.
 
